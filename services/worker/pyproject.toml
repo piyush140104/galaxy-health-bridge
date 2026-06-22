@@ -6,7 +6,7 @@ license = { text = "MIT" }
 
 dependencies = [
   "celery==5.4.0",
-  "redis==5.1.1",
+  "redis==8.0.0",
   "sqlalchemy[asyncio]==2.0.36",
   "asyncpg==0.30.0",
   "psycopg2-binary==2.9.10",          # sync driver for Celery tasks
