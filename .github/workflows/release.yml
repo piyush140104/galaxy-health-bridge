@@ -16,7 +16,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - uses: gradle/actions/setup-gradle@v3
+      - uses: gradle/actions/setup-gradle@v6
       - name: Assemble debug APK
         working-directory: apps/wearos
         run: ./gradlew :app:assembleDebug --no-daemon
