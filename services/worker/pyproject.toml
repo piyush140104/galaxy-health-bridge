@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 license = { text = "MIT" }
 
 dependencies = [
-  "celery==5.4.0",
+  "celery==5.6.3",
   "redis==5.1.1",
   "sqlalchemy[asyncio]==2.0.36",
   "asyncpg==0.30.0",
