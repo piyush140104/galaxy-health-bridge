@@ -70,8 +70,8 @@ dependencies {
     ksp("androidx.hilt:hilt-compiler:1.2.0")
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
+    implementation("com.google.dagger:hilt-android:2.59.2")
+    ksp("com.google.dagger:hilt-android-compiler:2.59.2")
 
     // Networking
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
