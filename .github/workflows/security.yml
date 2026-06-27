@@ -17,14 +17,18 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-      - uses: github/codeql-action/init@v3
-        with:
-          languages: swift
       - name: Install xcodegen
+        # Install before codeql-action/init: once init runs it injects an
+        # x86_64 tracer dylib via DYLD_INSERT_LIBRARIES, which makes brew
+        # (a Ruby process) try to relaunch under Rosetta and fail against
+        # the ARM /opt/homebrew prefix on macos-15.
         run: brew install xcodegen
       - name: Generate Xcode project
         working-directory: apps/ios
         run: xcodegen generate
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: swift
       - name: Build for CodeQL
         working-directory: apps/ios
         run: |
@@ -63,4 +67,5 @@ jobs:
           fetch-depth: 0
       - uses: gitleaks/gitleaks-action@v2
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
