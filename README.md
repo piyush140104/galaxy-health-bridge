@@ -35,6 +35,8 @@ Sleep stages, SpO2 and workouts are on the roadmap. See `docs/ROADMAP.md`.
 * A Mac to install the iPhone app once. You can use any Apple ID, even a free one.
 * A computer with `adb` installed to load the watch app once.
 
+Verified end-to-end on an iPhone 14 paired with a Galaxy Watch 4. Other models that meet the requirements above should work but have not been tested by the maintainers — please open an issue if you hit something on a different combination.
+
 ## How it works
 
 ```
