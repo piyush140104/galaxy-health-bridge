@@ -26,7 +26,7 @@ jobs:
       - name: Generate Xcode project
         working-directory: apps/ios
         run: xcodegen generate
-      - uses: github/codeql-action/init@v3
+      - uses: github/codeql-action/init@v4
         with:
           languages: swift
       - name: Build for CodeQL
@@ -39,7 +39,7 @@ jobs:
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
             build
-      - uses: github/codeql-action/analyze@v3
+      - uses: github/codeql-action/analyze@v4
 
   codeql-kotlin:
     name: CodeQL (Kotlin)
@@ -50,13 +50,13 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - uses: github/codeql-action/init@v3
+      - uses: github/codeql-action/init@v4
         with:
           languages: java-kotlin
       - name: Build for CodeQL
         working-directory: apps/wearos
         run: ./gradlew :app:assembleDebug --no-daemon
-      - uses: github/codeql-action/analyze@v3
+      - uses: github/codeql-action/analyze@v4
 
   gitleaks:
     name: Secret scan
