@@ -45,8 +45,8 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.wear.compose:compose-material:1.3.1")
     implementation("androidx.wear.compose:compose-foundation:1.3.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.2")
-    implementation("androidx.lifecycle:lifecycle-service:2.8.2")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.11.0")
+    implementation("androidx.lifecycle:lifecycle-service:2.11.0")
 
     // Health Services on the Watch
     implementation("androidx.health:health-services-client:1.0.0-rc02")
